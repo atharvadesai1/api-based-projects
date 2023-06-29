@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #searchForm {
+        display: flex;
+        margin-bottom: 20px;
+        }
+
+        #searchInput {
+        flex: 1;
+        padding: 5px;
+        }
+
+        #searchForm button {
+        padding: 5px 10px;
+        }
+
+        #searchResults {
+        border: 1px solid #ccc;
+        padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit">Search</button>
+        </form>
+        <div id="searchResults"></div>
+
+        <script>
+                // Get references to the form, input field, and results container
+            const form = document.getElementById('searchForm');
+            const input = document.getElementById('searchInput');
+            const resultsContainer = document.getElementById('searchResults');
+
+            // Add event listener to the form for submission
+            form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get the search term from the input field
+            const searchTerm = input.value;
+
+            // Perform the search (replace this with your own search logic)
+            const searchResults = performSearch(searchTerm);
+
+            // Display the search results
+            displayResults(searchResults);
+            });
+
+            // Placeholder function to perform the search (replace with your own logic)
+            function performSearch(searchTerm) {
+            // Perform your search logic here and return the results
+            // You can use APIs, databases, or any other data source
+            // For demonstration purposes, let's return some dummy data
+            const results = [
+                'Result 1',
+                'Result 2',
+                'Result 3',
+                'Result 4',
+                'Result 5'
+            ];
+
+            return results;
+            }
+
+            // Function to display the search results
+            function displayResults(results) {
+            // Clear previous results
+            resultsContainer.innerHTML = '';
+
+            // Create a <ul> element to hold the results
+            const ul = document.createElement('ul');
+
+            // Loop through the results and create <li> elements
+            results.forEach(function(result) {
+                const li = document.createElement('li');
+                li.textContent = result;
+                ul.appendChild(li);
+            });
+
+            // Append the <ul> element to the results container
+            resultsContainer.appendChild(ul);
+            }       
+
+        </script>
+</body>
+</html>
