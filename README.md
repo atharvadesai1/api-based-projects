@@ -1,1 +1,2 @@
-# movie-search-engine api based javascript project
+# movie-search-engine 
+# news-app
