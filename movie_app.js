@@ -11,6 +11,7 @@ const displayMovie = document.getElementById("displayMovies")
 const getMovies = async(url) => {
     const response = await fetch(url) 
     const data  = await response.json()
+    console.log(data) 
     showMovies(data)
 }
 
@@ -29,7 +30,8 @@ const showMovies = (data) => {
             </h1>
             <div class="rating">
             <span>${element.vote_average}</span> &nbsp;<img src="star.png" alt="" class="star" width="22px" height="22px">
-            </div>
+            </div><br>
+            <p class="release_date">Release Date: ${element.release_date}</p>
             <br><br>
             <h2>Overview:</h2><br>
             <p>${element.overview}</p>

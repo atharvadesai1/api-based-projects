@@ -23,15 +23,18 @@ body{
 
 
 #innerSearch{
-    width: 50%;
+    width: 55%;
     padding: 13px;
     margin: 15px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     border-radius: 25px;
-    border: 2px solid black;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
 }   
+
 
 #displayMovies{
     display: grid;
@@ -69,26 +72,26 @@ body{
     padding: 20px;
     border-radius: 10px 10px 10px 10px;
     transition: 0.5s;
-    background-color:white;
+    background-color:black;
     margin: 0px 9px;
     /* z-index: 100; */
 }
 
 span{
-    color: rgb(25, 226, 25);
+    color: lightgreen;
     font-weight: bold;
-    background-color: white;
+    background-color: black;
     font-size: 30px;
 }
 h2{
     font-weight: bold;
-    background-color:white;
-    color:black;
+    background-color:black;
+    color:white;
 }
 
 h1,p{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
 }
 
 .box:hover .overlay {
@@ -115,4 +118,10 @@ h3{
     position: absolute;
     right: 8px;
     top: 22px;
+}
+
+.release_date{
+    color: rgb(255, 234, 0);
+    font-size: larger;
+    font-weight: bold;
 }
