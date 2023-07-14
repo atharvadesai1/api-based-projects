@@ -6,16 +6,17 @@ let science = document.getElementById('science')
 let sports = document.getElementById('sports')
 let technology = document.getElementById('technology')
 const newsSlot = document.getElementById('newsSlot')
+const newsImage = document.getElementsByClassName('newsImage')
 const headline = document.getElementsByTagName('h4')
 
 
-// const generalAPI = "#"
-// const buisnessAPI = "#"
-// const entertainmentAPI = "#"
-// const healthAPI = "#"
-// const scienceAPI = "#"
-// const sportsAPI = "#"
-const APIURL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=8307c0895dd84009918704df0d47d6be';
+const generalAPI = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=8307c0895dd84009918704df0d47d6be';
+const buisnessAPI = "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=8307c0895dd84009918704df0d47d6be"
+const entertainmentAPI = "https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=8307c0895dd84009918704df0d47d6be"
+const healthAPI = "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=8307c0895dd84009918704df0d47d6be"
+const scienceAPI = "https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=8307c0895dd84009918704df0d47d6be"
+const sportsAPI = "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=8307c0895dd84009918704df0d47d6be"
+const technologyAPI = "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=8307c0895dd84009918704df0d47d6be"
 // const options = {
 // 	method: 'GET',
 // 	headers: {
@@ -25,13 +26,14 @@ const APIURL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=8307c0895
 // };
 
 
-const printingURL = async (url) => {
+const printingGeneralURL = async (url) => {
     const response = await fetch(url)
     const data = await response.json()
     console.log(data)
     showNews(data)
 }
-printingURL(APIURL)
+printingGeneralURL(generalAPI)
+
 
 function showNews(data){
     data.articles.forEach(element => {
@@ -75,6 +77,17 @@ function generalFunction(currentState) {
     sports.style.backgroundColor = "#f5f5f5"
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+
+    const printingGeneralURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingGeneralURL(generalAPI)
+
 }
 
 function buisnessFunction(currentState) {
@@ -92,6 +105,16 @@ function buisnessFunction(currentState) {
     sports.style.backgroundColor = "#f5f5f5"
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+
+    const printingBuisnessURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingBuisnessURL(buisnessAPI)    
 
 }
 
@@ -111,7 +134,14 @@ function entertainmentFunction(currentState) {
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "red"
 
-
+    newsSlot.innerHTML = ""
+    const printingEntertainmentURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingEntertainmentURL(entertainmentAPI)
 }
 
 function healthFunction(currentState) {
@@ -129,6 +159,15 @@ function healthFunction(currentState) {
     sports.style.backgroundColor = "#f5f5f5"
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+    const printingHealthURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingHealthURL(healthAPI)
 }
 
 function scienceFunction(currentState) {
@@ -146,6 +185,16 @@ function scienceFunction(currentState) {
     sports.style.backgroundColor = "#f5f5f5"
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+
+    const printingScienceURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingScienceURL(scienceAPI)
 }
 
 function sportsFunction(currentState) {
@@ -163,6 +212,16 @@ function sportsFunction(currentState) {
     sports.style.backgroundColor = "red"
     technology.style.backgroundColor = "#f5f5f5"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+
+    const printingSportsURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingSportsURL(sportsAPI)
 }
 
 function technologyFunction(currentState) {
@@ -180,4 +239,14 @@ function technologyFunction(currentState) {
     sports.style.backgroundColor = "#f5f5f5"
     technology.style.backgroundColor = "red"
     entertainment.style.backgroundColor = "#f5f5f5"
+
+    newsSlot.innerHTML = ""
+
+    const printingTechnologyURL = async (url) => {
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(data)
+        showNews(data)
+    }
+    printingTechnologyURL(technologyAPI)
 }
