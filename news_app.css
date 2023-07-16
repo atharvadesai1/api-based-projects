@@ -3,6 +3,16 @@
     src: url('font-styles/Deutschlander.otf');
 }
 
+@font-face {
+    font-family: oldnews;
+    src: url('font-styles/OldNewspaperTypes.ttf');
+}
+
+@font-face {
+    font-family: fakenews;
+    src: url('font-styles/Fake\ News.otf');
+}
+
 body{
     background-color: black;
 }
@@ -22,8 +32,10 @@ body{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     color: aliceblue;
-    background-color: red;
+    background-image: url('news3.avif');
     padding: 30px;
+    font-family: fakenews;
+    font-size: 90px;
 }
 
 #types{
@@ -62,7 +74,7 @@ body{
     left: 13px; 
     border-radius: 5px;
     padding: 10px 15px;
-    background-color: rgba(245, 28, 28, 0.67);
+    background-color: rgb(253, 105, 105);
     color: white;
     transition: 0.3s;
     z-index: 100;
