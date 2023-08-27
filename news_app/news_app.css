@@ -97,32 +97,3 @@ h4{
 .newsImage>img{
     border: 2px white solid;
 }
-
-@media only screen and (max-width:400px) {
-    body{
-        background-color: black;
-        width: 400px;
-    }
-
-    #newsSlot{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-    }
-
-    .heading{
-        text-align: center;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        color: aliceblue;
-        background-image: url('news3.avif');
-        padding: 30px;
-        font-family: fakenews;
-        font-size: 60px;
-    }
-
-    .newsImage{
-        margin-bottom: 15px;
-        margin-left: 25px;
-    }
-}
-
